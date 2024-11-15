@@ -1239,7 +1239,7 @@ model_code = Model_dic[Model_inp]
 engine_type_inp = col1.selectbox('Engine Type:', options=engine_type_list, help='Select fuel type.')
 engine_type = engine_type_dic[engine_type_inp]
 
-engineV = col2.number_input('Engine Volume (e.g., 2.3):', min_value=0.0, max_value=6.4, step=0.1, help='Enter engine volume (in liters).')
+engineV = col2.number_input('Engine size (e.g., 660cc):', min_value=0.0, max_value=2500, step=0.1, help='Enter engine size in cc.')
 
 # Filter models for the selected Model
 Model_list = find_Model(Model_inp)
