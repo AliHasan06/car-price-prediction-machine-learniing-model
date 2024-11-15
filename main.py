@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+import os
 
 # Input dictionaries for categorical encoding
 Model_dic = {'Ambassador': 0, 'Audi': 1, 'BMW': 2, 'Chevrolet': 3, 'Datsun': 4, 'Fiat': 5, 'Force': 6, 'Ford': 7, 'Honda': 8, 'Hyundai': 9, 'Isuzu': 10, 'Jaguar': 11, 'Jeep': 12, 'Kia': 13, 'Land': 14, 'Lexus': 15, 'Mahindra': 16, 'Maruti': 17, 'Mercedes-Benz': 18, 'Mitsubishi': 19, 'Nissan': 20, 'Renault': 21, 'Skoda': 22, 'Tata': 23, 'Toyota': 24, 'Volkswagen': 25}
@@ -1216,7 +1217,11 @@ def find_Model(Model):
 # Load prediction model
 @st.cache(allow_output_mutation=True)
 def model_loader(path):
-    return joblib.load(path)
+    if os.path.exists(path):
+        return joblib.load(path)
+    else:
+        st.error(f"Model file not found at: {path}")
+        return None
 
 model_forest = model_loader("finalized_Model.sav")
 
