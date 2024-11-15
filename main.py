@@ -1203,7 +1203,7 @@ brand_list = list(brand_dic.keys())
 engine_type_list = list(engine_type_dic.keys())
 owner_list = list(owner_dict.keys())
 
-# Page config
+
 st.set_page_config(page_title='Used Car Price Prediction by Ali Hasan', page_icon='🚗')
 
 # Load dataset
