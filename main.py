@@ -1207,7 +1207,7 @@ owner_list = list(owner_dict.keys())
 st.set_page_config(page_title='Used Car Price Prediction by Ali Hasan', page_icon='🚗')
 
 # Load dataset
-car = pd.read_csv(r'C:\Users\dilib.DESKTOP-GTP80ID\Downloads\car-price-prediction-machine-learniing-model\Car_cleaned_with_Model.csv')
+car = pd.read_csv('Car_cleaned_with_Model.csv')
 
 # Function to filter models by brand
 def find_model(brand):
