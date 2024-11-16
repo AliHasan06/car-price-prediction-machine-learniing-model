@@ -42,7 +42,7 @@ def model_loader(path):
         st.error(f"Model file not found at: {path}")
         return None
 
-model_forest = model_loader("finalized_Model.sav")
+model_forest = model_loader("finalized_Model.pkl")
 
 # Page layout
 st.markdown("<h2 style='text-align: center;'>🚗  Used Car Price Prediction™  🚗</h2>", unsafe_allow_html=True)
